@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APOLO v2</title>
+    <link rel="stylesheet" href="css/main.css"> <!--Hoja de estilos principal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet"> <!--Fuente de Apolo importada -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="justify-content-center d-flex">
+        <nav class="navbar navbar-expand-lg" id="nav-apolo">
+            
+            <div class="container">
+                <img src="img/logo.png" alt="Logo">
+
+                <!--Este es el botón del menu desplegable cuando está en pantallas chicas-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownServicios" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownServicios">
+                                <li><a class="dropdown-item" href="#">Alertas Apolo</a></li>
+                                <li><a class="dropdown-item" href="#">Búsquedas Retroactivas</a></li>
+                                <li><a class="dropdown-item" href="#">Reportes Financieros</a></li>
+                                <li><a class="dropdown-item" href="#">Reportes Krypto</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Membresías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-apolo-gray" href="#">Ingresar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-apolo-blue" href="#">Registrarse</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--<div class="collapse navbar-collapse nav-idiomas">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownServicios" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Idiomas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownServicios">
+                                <li><a class="dropdown-item" href="#">Español</a></li>
+                                <li><a class="dropdown-item" href="#">Inglés</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--Seccion Portada-->
+        <section class="portada-principal">
+            <div class="container portada-principal-content">
+                <div class="row">
+                    <div class="col-lg-5 col-md-8">
+                        <h1>
+                            Transformamos datos en decisiones inteligentes
+                        </h1>
+                        <p class="parrafo-m txt-color-p1 mb-5">
+                            En Apolo Service, simplificamos lo complejo. Nuestro compromiso es ofrecerte soluciones
+                            tecnológicas que potencian la eficiencia, minimizan los riesgos y maximizan el impacto
+                            de cada decisión en tu empresa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="content">
+            <!--Sección de Servicios-->
+            <section id="servicios">
+                <div class="container position-relative z-1 text-center mb-5">
+                    <h1 class="">¿Listo para dar el siguiente paso?</h1>
+                    <p class="mb-5 subtitle">Explora nuestras soluciones</p>
+                    <!--Listado de opciones-->
+                    <div class="container-tabs mb-3">
+                        <ul class="nav justify-content-around" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active link-apolo" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">
+                                    Alertas Apolo
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link link-apolo" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">
+                                    Búsquedas Retroactivas
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link link-apolo" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-contact" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">
+                                    Reportes Financieros
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link link-apolo" id="pills-disabled-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-disabled" type="button" role="tab"
+                                    aria-controls="pills-disabled" aria-selected="false">
+                                    Reportes Krypto
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--contendor que muestra la información de cada opción-->
+                    <div class="tab-content container-tab p-3">
+                        <!--Alertas Apolo-->
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-md-6 p-4 container-i-s">
+                                    <img class="icono-serv mb-3" src="img/icono-alertas.png">
+                                    <h4 class="mb-2">Alertas Apolo</h4>
+                                    <p class="mb-4">
+                                        <b>Tu radar personalizado para detectar riesgos antes de que sucedan.</b>
+                                    </p>
+                                    <p>
+                                        Con Alertas Apolo monitoreamos constantemente más de 500 publicaciones legales,
+                                        judiciales, administrativas y mediáticas, para ofrecerte información en tiempo
+                                        real que te permite anticiparte a cualquier contingencia.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 center-bottom">
+                                    <img src="img/alertas-img.png" class="img-service move-zoom" alt="Imagen del celular">
+                                </div>
+                                <div class="col-md-12 p-4 d-flex">
+                                    <button class="btn btn-apolo-y shadow mt-3">Conocer más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Retroactivas Apolo-->
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-md-6 p-4 container-i-s">
+                                    <img class="icono-serv mb-3" src="img/icono-br.png">
+                                    <h4 class="mb-2">Busquedas Retroactivas</h4>
+                                    <p class="mb-4">
+                                        <b>Todo lo que necesitas saber, al alcance de un clic.</b>
+                                    </p>
+                                    <p>
+                                        ¿Buscas un panorama completo sobre una empresa o persona? En minutos te
+                                        entregamos un informe detallado que cubre aspectos legales, judiciales,
+                                        reputacionales y administrativos.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 center-bottom">
+                                    <img src="img/retroactivas.png" alt="Imagen del celular" class="img-fluid">
+                                </div>
+                                <div class="col-md-12 p-4 d-flex">
+                                    <button class="btn btn-apolo-y shadow mt-3">Conocer más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Reportes financieros-->
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                            aria-labelledby="pills-contact-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-md-6 p-4 container-i-s">
+                                    <img class="icono-serv mb-3" src="img/icono-rf.png">
+                                    <h4 class="mb-2">Reportes Financieros</h4>
+                                    <p class="mb-4">
+                                        Decisiones estratégicas con datos confiables.
+                                    </p>
+                                    <p>
+                                        Accede a un análisis financiero profundo que abarca hasta 5 años de actividad,
+                                        diseñado para proporcionarte información clave sobre la salud económica de
+                                        cualquier organización.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 center-bottom">
+                                    <img src="img/reporteF.png" alt="Imagen del celular" class="img-fluid">
+                                </div>
+                                <div class="col-md-12 p-4 d-flex">
+                                    <button class="btn btn-apolo-y shadow mt-3">Conocer más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Reportes Krypto-->
+                        <div class="tab-pane fade" id="pills-disabled" role="tabpanel"
+                            aria-labelledby="pills-disabled-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-md-6 p-4 container-i-s">
+                                    <img class="icono-serv mb-3" src="img/icono-rk.png">
+                                    <h4 class="mb-3 mb-3">Reportes Krypto</h4>
+                                    <p class="mb-4">
+                                        La información más completa sobre empresas.
+                                    </p>
+                                    <p>
+                                        Desde su constitución y socios hasta su reputación en el mercado, el Reporte
+                                        Krypto te da una visión integral para tomar decisiones inteligentes y seguras.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 center-bottom">
+                                    <img src="img/reportek.png" alt="Imagen del celular" class="img-fluid">
+                                </div>
+                                <div class="col-md-12 p-4 d-flex">
+                                    <button class="btn btn-apolo-y shadow mt-3">Conocer más</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container container-parallax">
+                    <img class="img-flex bg-sol-t h-parallax" data-speed="0.5" src="img/solapolo-back.png">
+                    <h1 class="text-center mb-4">Confianza respaldada con resultados</h1>
+                    <div id="textCarousel" class="carousel" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="d-flex justify-content-center align-items-center flex-column text-center">
+                                    <div class="container-testimonial">
+                                        <p class="mb-0 subtitle"><b>Pablo Aguilar Albo</b></p>
+                                        <p class="subtitle">General Counsel</p>
+                                        <p class="comentario-testimonio">
+                                            Con Alertas Apolo mi equipo detectó temas legales que desconocíamos, lo que
+                                            nos
+                                            permitió atender a tiempo dichos incidentes y evitar así contingencias
+                                            futuras.
+                                        </p>
+                                    </div>
+                                    <img width="100" class="" src="testimonial/img/logo-col-cinepolis.png">
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center align-items-center flex-column text-center">
+                                    <div class="container-testimonial">
+                                        <p class="mb-0 subtitle"><b>Luis Antonio Sanchez Grande</b></p>
+                                        <p class="subtitle">Area Jurídica</p>
+                                        <p class="comentario-testimonio">
+                                            Estamos muy contentos con el uso de Marketplace de Apoto Service, facilitan
+                                            mucho el cumplimiento de fechas y entrega de trámites acortando mucho los
+                                            tiempos de espera ...
+                                        </p>
+                                    </div>
+                                    <img width="100" src="testimonial/img/logo-col-walmart.png">
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center align-items-center flex-column text-center">
+                                    <div class="container-testimonial">
+                                        <p class="mb-0 subtitle"><b>Karla Janet Gómez</b></p>
+                                        <p class="subtitle">Gerente de Cobranza</p>
+                                        <p class="comentario-testimonio">
+                                            Durante el tiempo que he utilizado Apolo Service me ha dado un gran
+                                            resultado,
+                                            es sencillo de utilizar y estas avisada ante cualquier alerta que pueda
+                                            surgir
+                                            ...
+                                        </p>
+                                    </div>
+                                    <img width="100" src="testimonial/img/logo-col-cinepolis.png">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1">
+                                <i class="bi bi-circle-fill"></i>
+                            </button>
+                            <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="1"
+                                aria-label="Slide 2">
+                                <i class="bi bi-circle-fill"></i>
+                            </button>
+                            <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="2"
+                                aria-label="Slide 3">
+                                <i class="bi bi-circle-fill"></i>
+                            </button>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#textCarousel"
+                            data-bs-slide="prev">
+                            <i class="bi bi-arrow-left icon-circle" aria-hidden="true"></i>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#textCarousel"
+                            data-bs-slide="next">
+                            <i class="bi bi-arrow-right icon-circle" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <img class="img-flex bg-sol-b h-parallax" data-speed="0.3" src="img/solapolo-back.png">
+
+                </div>
+            </section>
+
+            <!--Sección de Clientes-->
+            <section class="logos" id="clientes">
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="img/logos/0.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/1.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/2.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/3.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/4.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/5.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/6.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/7.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/8.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/9.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/0.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/1.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/2.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/3.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/4.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/5.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/6.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/7.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/8.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/logos/9.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Sección de Oferta de valor-->
+            <section class="heroshot" id="propuesta-valor">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                            <h1 class="mb-4">Innovación con propósito</h1>
+                            <p>
+                                Somos más que una legaltech: somos tus aliados estratégicos. En Apolo Service nos
+                                dedicamos a crear herramientas que simplifican procesos legales, financieros y
+                                administrativos, transformando la manera en que las empresas gestionan información
+                                crítica.
+                            </p>
+
+                            <p>
+                                Nuestro impacto se extiende a múltiples áreas de tu empresa, incluyendo Legal,
+                                Compras, Recursos Humanos, Crédito, Operaciones, Finanzas y muchas más. Sabemos que
+                                cada departamento tiene retos únicos, por lo que nuestras soluciones están diseñadas
+                                para adaptarse a tus necesidades, garantizando confianza, transparencia y
+                                resultados.
+                            </p>
+
+                            <p class="subtitle"><b>Tu éxito es nuestra prioridad.</b></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="img/heroshot-mobile.png" alt="Imagen del celular" class="img-flex move-left">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Sección de info banner-->
+            <section class="bg-apolo-blue" id="info-banner">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-12 text-center">
+                            <h1 class="text-white mb-3">
+                                Hablemos de cómo podemos ayudarte
+                            </h1>
+                            <p class="text-white">
+                                En Apolo Service no solo hablamos de soluciones, las entregamos. Nuestro equipo combina
+                                experiencia, tecnología de vanguardia y un enfoque humano para garantizar que cada
+                                servicio sea una pieza clave en tu empresa.
+                            </p>
+                            <button class="btn btn-light rounded-pill px-4 py-2 mt-3">Conocer más</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Sección de descarga de app-->
+            <section id="descarga-app">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <img src="img/telefono.png" alt="Imagen del celular" class="img-flex move-zoom">
+                        </div>
+                        <div class="col-xl-6 txt-centrado-xy">
+                            <h1 class="">
+                                Tu <span>radar personalizado</span> para detectar riesgos antes de que sucedan.
+                            </h1>
+                            <p class="mb-5">
+                                Con Alertas Apolo monitoreamos constantemente más de 500 publicaciones legales,
+                                judiciales, administrativas y mediáticas, para ofrecerte información en tiempo
+                                real que te permite anticiparte a cualquier contingencia.
+                            </p>
+                            <div class="img-apps">
+                                <img src="img/google-play.png" class="me-3" width="130" alt="Imagen del celular">
+                                <img src="img/app-store.png" width="130" alt="Imagen del celular">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Sección de Ubicacion-->
+            <section class="py-5 bg-light position-relative z-1" id="mapa-apolo">
+                <div class="container">
+                    <h1 class="text-center mb-4">Contáctanos</h1>
+                    <div class="row text-center bg-apolo-blue text-white rounded mb-0">
+                        <!-- Dirección -->
+                        <div class="col-md-4 p-3">
+                            <div class="contact-card w-100">
+                                <i class="bi bi-geo-alt-fill fs-3"></i>
+                                <p class="mt-2 mb-0 subtitle">
+                                    Calle Séneca No. 134, Col. Palmas Polanco, Del. Miguel Hidalgo, CP
+                                    11560, CDMX
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Teléfono -->
+                        <div class="col-md-4 p-3">
+                            <div class="contact-card h-100">
+                                <i class="bi bi-phone fs-3"></i>
+                                <p class="mt-2 mb-0 subtitle">+52 (55) 52590798</p>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="col-md-4 p-3">
+                            <div class="contact-card h-100">
+                                <i class="bi bi-envelope-fill fs-3"></i>
+                                <p class="mt-2 mb-0 subtitle">contacto@apoloservice.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center text-white rounded">
+                        <div class="col-md-10 mb-3 mt-0">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.427438549306!2d-99.20483292393057!3d19.437129481843225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2021b4100064b%3A0xa601c792362c554f!2sS%C3%A9neca%20134%2C%20Polanco%2C%20Polanco%20II%20Secc%2C%20Miguel%20Hidalgo%2C%2011530%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1735335326167!5m2!1ses-419!2smx"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-apolo-y rounded-pill px-4 py-2 mt-3">Contáctanos</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container bg-apolo-dg py-5">
+            <div class="row justify-content-between">
+                <div class="col-md-4">
+                    <h6><b>Correo:</b></h6>
+                    <p class="subtitle-dato">contacto@apoloservice.com</p>
+                    <h6><b>Teléfono:</b></h6>
+                    <p class="subtitle-dato">+52 (55) 52590798</p>
+                    <h6><b>Dirección:</b></h6>
+                    <p class="mb-5 subtitle-dato">
+                        Calle Séneca No. 134, Col. Palmas Polanco,<br>
+                        Del. Miguel Hidalgo, CP 11560, CDMX
+                    </p>
+
+                    <h6><b>Síguenos</b></h6>
+                    <div class="social-icons">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-linkedin"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h6><b>Servicios</b></h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Alertas Apolo</a></li>
+                        <li><a href="#">Búsquedas Retroactivas</a></li>
+                        <li><a href="#">Reportes Financieros</a></li>
+                        <li><a href="#">Reportes Krypto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img width="190" class="logo-footer" src="img/logoPrincipalBlanco.png">
+                </div>
+            </div>
+        </div>
+        <div class="text-center bg-light p-3 text-black derechos">
+            <p class="mb-0 subtitle">2025 Servicios de Tecnología Apolo, S.A.P.I. de C.V. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/animaciones.js"></script>
+</body>
+
+</html>
